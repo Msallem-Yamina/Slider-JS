@@ -11,16 +11,12 @@ next.onclick = nextslide;
 
 let pagination = document.createElement("ul");
 pagination.setAttribute('id','pagination');
-
-// nekteb li 3la hasb slide
-
 for(let i = 1; i <= imglen;i++){
     let li = document.createElement("li");
     li.setAttribute('ind', i);
     li.appendChild(document.createTextNode(i));
     pagination.appendChild(li);    
 }
-// add ul to body
 document.getElementById('indice').appendChild(pagination);
 let ul = document.getElementById('pagination');
 let AllUl = Array.from(document.querySelectorAll("#pagination li")); 
@@ -64,4 +60,3 @@ AllUl.forEach ((item,i) =>{
         Active();
     };
 });
-
