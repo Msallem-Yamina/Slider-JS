@@ -1,0 +1,80 @@
+main {
+    max-width: 675px;
+    width: 100%; 
+    margin: 10px auto;
+    height: 250px;
+    position: relative;
+}
+main img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+main img.active {
+    opacity: 1;
+}
+main .num {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 8px;
+}
+.controle {
+    max-width: 670px;
+    width: 100%;
+    margin: auto;
+}
+.controle .prev, .controle .next {
+    background-color: aqua;
+    color: white;
+    font-size: 16px;
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 5px;
+    user-select: none; /* bech mynajjem had ya3mel select*/
+}
+.controle .prev {
+    float: left;
+}
+.controle .next {
+    float: right;
+}
+.controle .prev.disabled, .controle .next.disabled {
+    cursor: no-drop;
+    background-color: rgb(212, 248, 236);
+}
+.controle .indice {
+    width: 50%;
+    float: left;
+}
+.controle ul{
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+.controle ul li {
+    display: inline-block;
+    background-color: burlywood;
+    color: #333;
+    font-weight: bold;
+    height: 28px;
+    width: 28px;
+    border-radius: 4px;
+    margin: 0 2px;
+    line-height: 28px;
+    cursor: pointer;
+}
+.controle ul li.active{
+    background-color: aquamarine;
+    color: white;
+}
